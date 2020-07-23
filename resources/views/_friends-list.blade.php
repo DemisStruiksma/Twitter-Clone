@@ -2,13 +2,18 @@
 
 <ul>
     @foreach(auth()->user()->follows as $user)
-    <li>
-        <div class="flex items-center mb-4">
-            <img 
-            src="{{ $user->avatar }}" 
-            alt=""
-            class="rounded-full mr-2">
-            {{ $user->name }}
+    <li class="mb-4">
+        <div>
+            <a href="{{ route('profile', $user) }}" class="flex items-center text-sm">
+                <img 
+                    src="{{ $user->avatar }}" 
+                    alt=""
+                    class="rounded-full mr-2"
+                    width="40"
+                    height="40"
+                >
+                {{ $user->name }}
+            </a>
         </div>
     </li>
     @endforeach

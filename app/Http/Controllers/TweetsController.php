@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Tweet;
+use App\User;
 
 class TweetsController extends Controller
 {
-    public function index()
+    public function index(User $user)
     {
         return view('tweets.index', [
             'tweets' => current_user()->timeline()

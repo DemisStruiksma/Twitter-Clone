@@ -15,6 +15,7 @@
         <h5 class="font-bold mb-4">
             <a href="{{ $tweet->user->path() }}">
                 {{ $tweet->user->name }}
+            </a>
         </h5>
 
         <p class="text-sm">

@@ -21,8 +21,8 @@
 
             <button 
             type="submit" 
-            class="bg-blue-500 rounded-lg shadow py-2 px-2 text-white"
-            >Tweet-a-roo!</button>     
+            class="bg-blue-500 rounded-lg shadow py-1 px-6 text-white"
+            >Tweet</button>     
         </footer>
     </form>
 

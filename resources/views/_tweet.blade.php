@@ -7,19 +7,28 @@
                 class="rounded-full mr-2"
                 width="50"
                 height="50"
+                style="max-height:50px;"
             >
         </a>
     </div>
 
     <div>
-        <h5 class="font-bold mb-4">
+        <h5 class="font-bold">
             <a href="{{ $tweet->user->path() }}">
                 {{ $tweet->user->name }}
             </a>
         </h5>
 
-        <p class="text-sm">
+        <h5 class="mb-4">
+            <a href="{{ $tweet->user->path() }}">
+                {{ '@' . $tweet->user->username }}
+            </a>
+        </h5>
+
+        <p class="text-sm mb-3">
             {{ $tweet->body }}
-        </p> 
+        </p>
+
+        <x-like-buttons :tweet="$tweet" />
     </div>
 </div>

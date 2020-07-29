@@ -6,6 +6,7 @@
                     alt="{{ $user->username }}'s avatar"
                     width="60"
                     class="mr-4 rounded"
+                    style="max-height:60px;"
                 >
 
                 <div>

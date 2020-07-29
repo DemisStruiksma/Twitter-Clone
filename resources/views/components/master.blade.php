@@ -23,11 +23,13 @@
     <div id="app">
         <section class="px-8 py-4 mb-6">
             <header class="container mx-auto">
-                <h1 class="text-4xl">🐦</h1>
+                <a href="{{ route('home') }}"><h1 class="text-4xl hover:opacity-75">🐦</h1></a>
             </header>
         </section>
         
         {{ $slot }}
     </div>
+
+    <script src="http://unpkg.com/turbolinks"></script>
 </body>
 </html>

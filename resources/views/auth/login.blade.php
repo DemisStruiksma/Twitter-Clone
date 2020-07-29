@@ -76,7 +76,7 @@
                             <button type="submit"
                                     class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 mr-2"
                             >
-                                Submit
+                                Login
                             </button>
 
                             <a href="{{ route('password.request') }}" class="text-xs text-gray-700">Forgot Your Password?</a>

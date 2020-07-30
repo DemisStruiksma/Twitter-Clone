@@ -1,11 +1,11 @@
-<div class="border border-blue-400 rounded-lg px-8 py-6 mb-8">
+<div class="border border-gray-400 rounded-lg px-8 py-6 mb-8">
     <form method="POST" action="/tweets">
         @csrf
 
         <textarea 
         name="body"
-        class="w-full"
-        placeholder="What's up doc?"
+        class="w-full resize-none focus:outline-none placeholder-gray-600 focus:placeholder-gray-300"
+        placeholder="What's up?"
         required
         autofocus
         ></textarea>
@@ -18,12 +18,12 @@
                 alt="your avatar"
                 class="rounded-full mr-2"
                 width="50"
-                height="50"
+                style="max-height:50px;"
             >
 
             <button 
             type="submit" 
-            class="bg-blue-500 hover:bg-blue-600 rounded-lg shadow px-10 text-sm text-white h-10"
+            class="bg-blue-500 hover:bg-blue-600 rounded-lg shadow px-10 text-sm text-white h-10 focus:outline-none"
             >Tweet</button>     
         </footer>
     </form>

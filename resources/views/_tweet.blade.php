@@ -4,7 +4,7 @@
             <img 
                 src="{{ $tweet->user->avatar }}" 
                 alt=""
-                class="rounded-full mr-2"
+                class="rounded-full mr-2 hover:opacity-75"
                 width="50"
                 height="50"
                 style="max-height:50px;"
@@ -13,13 +13,13 @@
     </div>
 
     <div>
-        <h5 class="font-bold">
+        <h5 class="font-bold hover:opacity-75">
             <a href="{{ $tweet->user->path() }}">
                 {{ $tweet->user->name }}
             </a>
         </h5>
 
-        <h5 class="mb-4">
+        <h5 class="mb-4 hover:opacity-75">
             <a href="{{ $tweet->user->path() }}">
                 {{ '@' . $tweet->user->username }}
             </a>

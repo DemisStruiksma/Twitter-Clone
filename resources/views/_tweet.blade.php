@@ -15,7 +15,11 @@
     <div>
         <h5 class="font-bold hover:opacity-75">
             <a href="{{ $tweet->user->path() }}">
-                {{ $tweet->user->name }}
+                {{ $tweet->user->name }} ·
+            </a>
+
+            <a href="{{ $tweet->user->path() }}" class="text-gray-800 text-sm font-normal">
+                {{ $tweet->created_at->diffForHumans() }}
             </a>
         </h5>
 

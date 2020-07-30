@@ -30,11 +30,11 @@ Route::middleware('auth')->group(function () {
         'ProfilesController@edit'
     )->middleware('can:edit,user');
 
+    Route::get('/profiles/{user:username}', 'ProfilesController@show')->name('profile');
+
     Route::patch('/profiles/{user:username}', 'ProfilesController@update')->middleware('can:edit,user');
 
     Route::get('/explore', 'ExploreController');
 });
-
-Route::get('/profiles/{user:username}', 'ProfilesController@show')->name('profile');
 
 Auth::routes();

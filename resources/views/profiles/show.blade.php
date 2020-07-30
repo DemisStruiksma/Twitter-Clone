@@ -2,9 +2,10 @@
     <header class="mb-6 relative">
     <div class="relative">
         <img 
-                src="https://source.unsplash.com/700x223" 
+                src="{{ $user->banner }}" 
                 alt=""
                 class="mb-2 rounded-lg"
+                style="max-width:700px; max-height:223px;"
             >
 
             <img 

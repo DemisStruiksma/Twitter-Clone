@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'bio', 'username', 'avatar', 'name', 'email', 'password',
+        'bio', 'username', 'avatar', 'banner', 'name', 'email', 'password',
     ];
 
     /**
@@ -44,6 +44,16 @@ class User extends Authenticatable
     
         } else {
             return asset('images/default-avatar.png');
+        }
+    }
+
+    public function getBannerAttribute($value)
+    {
+        if(isset($value)) {
+            return asset('storage/' . $value );
+    
+        } else {
+            return asset('https://source.unsplash.com/700x223');
         }
     }
 

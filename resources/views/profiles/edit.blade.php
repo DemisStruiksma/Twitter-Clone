@@ -10,7 +10,7 @@
                 Name
             </label>
 
-            <input class="border border-gray-400 p-2 w-full"
+            <input class="border border-gray-400 p-2 w-full focus:outline-none placeholder-gray-600 focus:placeholder-gray-300"
                    type="text"
                    name="name"
                    id="name"
@@ -30,7 +30,7 @@
                 Username
             </label>
 
-            <input class="border border-gray-400 p-2 w-full"
+            <input class="border border-gray-400 p-2 w-full focus:outline-none placeholder-gray-600 focus:placeholder-gray-300"
                    type="text"
                    name="username"
                    id="username"
@@ -45,13 +45,33 @@
 
         <div class="mb-6">
             <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
+                   for="bio"
+            >
+                Bio
+            </label>
+
+            <textarea class="border border-gray-400 p-2 w-full resize-none focus:outline-none placeholder-gray-600 focus:placeholder-gray-300"
+                   type="text"
+                   name="bio"
+                   id="bio"
+                   value="{{ $user->bio }}"
+                   placeholder="{{ $user->bio }}"
+            ></textarea>
+
+            @error('bio')
+                <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <div class="mb-6">
+            <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                   for="avatar"
             >
                 Avatar
             </label>
 
             <div class="flex">
-                <input class="border border-gray-400 p-2 w-full"
+                <input class="border border-gray-400 p-2 w-full focus:outline-none placeholder-gray-600 focus:placeholder-gray-300"
                        type="file"
                        name="avatar"
                        id="avatar"
@@ -76,7 +96,7 @@
                 Email
             </label>
 
-            <input class="border border-gray-400 p-2 w-full"
+            <input class="border border-gray-400 p-2 w-full focus:outline-none value-gray-600 focus:placeholder-gray-300"
                    type="email"
                    name="email"
                    id="email"
@@ -96,7 +116,7 @@
                 Password
             </label>
 
-            <input class="border border-gray-400 p-2 w-full"
+            <input class="border border-gray-400 p-2 w-full focus:outline-none"
                    type="password"
                    name="password"
                    id="password"
@@ -115,7 +135,7 @@
                 Password Confirmation
             </label>
 
-            <input class="border border-gray-400 p-2 w-full"
+            <input class="border border-gray-400 p-2 w-full focus:outline-none"
                    type="password"
                    name="password_confirmation"
                    id="password_confirmation"

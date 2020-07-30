@@ -37,9 +37,7 @@
         </div>
 
         <p class="text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rutrum velit massa, eu suscipit neque lobortis dictum. 
-        Vivamus vel est at quam commodo accumsan. Vestibulum id maximus est. Suspendisse laoreet urna mauris, eu placerat nisi tempor non. 
-        Mauris dignissim dignissim massa vitae euismod. Morbi vel convallis nulla, vestibulum fringilla nisl.
+            {{ $user->bio }}
         </p>
     </header>
 

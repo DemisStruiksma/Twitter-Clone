@@ -29,7 +29,7 @@
             </a>
         </h5>
 
-        <p class="text-sm mb-3">
+        <p class="text-base mb-3">
             {{ $tweet->body }}
         </p>
 

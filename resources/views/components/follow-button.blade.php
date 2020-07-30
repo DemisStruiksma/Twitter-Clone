@@ -1,4 +1,4 @@
-@if (current_user()->isNot($user))
+@if (Auth::check() && current_user()->isNot($user))
 <form mehtod="POST" action="{{ route('follow', $user->username) }}">
     @csrf
 

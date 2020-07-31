@@ -33,6 +33,8 @@
             {{ $tweet->body }}
         </p>
 
+        <img src="{{ $tweet->image }}" alt="image">
+
         <x-like-buttons :tweet="$tweet" />
     </div>
 </div>

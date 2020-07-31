@@ -110,10 +110,16 @@
 
                         <div>
                             <button type="submit"
-                                    class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"
+                                    class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 focus:outline-none"
                             >
                                 Register
                             </button>
+
+                            <a href="/login"><button type="button"
+                                    class="bg-gray-600 text-white rounded py-2 px-4 hover:bg-gray-700 mr-2 focus:outline-none"
+                            >
+                                Already registered?
+                            </button></a>
                         </div>
                     </form>
                 </div>

@@ -52,14 +52,14 @@
 
 
                         <div class="mb-6">
-                            <div>
+                            <div class="flex items-center">
                                 <input class="mr-1"
                                     type="checkbox"
                                     name="remember"
                                     id="remember" {{ old('remember') ? ' checked' : '' }}
                                 >
 
-                                <label class="text-xs text-gray-700 font-bold uppercase"
+                                <label class="text-sm text-gray-700 font-bold uppercase"
                                     for="remember"
                                 >
                                     Remember Me
@@ -74,10 +74,16 @@
 
                         <div>
                             <button type="submit"
-                                    class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 mr-2"
+                                    class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 mr-2 focus:outline-none"
                             >
                                 Login
                             </button>
+
+                            <a href="/register"><button type="button"
+                                    class="bg-gray-600 text-white rounded py-2 px-4 hover:bg-gray-700 mr-2 focus:outline-none"
+                            >
+                                Not registered yet?
+                            </button></a>
 
                             <a href="{{ route('password.request') }}" class="text-xs text-gray-700">Forgot Your Password?</a>
                         </div>

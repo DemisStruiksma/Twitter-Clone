@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tweet;
 use App\User;
+use Illuminate\Http\Request;
 
 class TweetsController extends Controller
 {
@@ -14,21 +15,24 @@ class TweetsController extends Controller
         ]);
     }
 
-    public function store()
+    public function store(Tweet $tweet)
     {
-        // $attributes = request()->validate(['body' => 'required|max:255']);
+        $attributes = request()->validate([
+            'body' => 'required|max:255',
+            'image' => ['file'],
+            ]);
 
         Tweet::create([
-            $attributes = request()->validate([
-            'body' => ['required|max:255'],
-            'user_id' => auth()->id(),  
-            'image' => ['file'],
-            ])
+            'user_id' => auth()->id(),
+            'body' => $attributes['body'],
+            'image' => $attributes['image'],
         ]);
 
         if(request('image')) {
             $attributes['image'] = request('image')->store('images');
         }
+
+        $tweet->update($attributes);
 
         return redirect()->route('home');
     }

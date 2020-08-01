@@ -1,5 +1,5 @@
 <div class="border border-gray-400 rounded-lg px-8 py-6 mb-8">
-    <form method="POST" action="/tweets">
+    <form method="POST" action="/tweets" enctype="multipart/form-data">
         @csrf
 
         <textarea 

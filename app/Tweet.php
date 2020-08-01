@@ -18,9 +18,6 @@ class Tweet extends Model
 
     public function getImageAttribute($value)
     {
-        if(isset($value)) {
-            return asset('storage/' . $value );
-    
-        }
+        return asset('storage/' . $path );
     }
 }

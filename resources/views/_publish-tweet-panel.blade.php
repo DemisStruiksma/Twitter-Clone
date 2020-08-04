@@ -2,13 +2,18 @@
     <form method="POST" action="/tweets" enctype="multipart/form-data">
         @csrf
 
-        <textarea 
+        <textarea
+        id="tweet_body" 
         name="body"
         class="w-full resize-none focus:outline-none placeholder-gray-600 focus:placeholder-gray-300"
         placeholder="What's up?"
         required
         autofocus
-        ></textarea>
+        maxlength="255"
+        >
+        </textarea>
+
+        <span id="chars" class="text-sm">255</span> 
 
         <hr class="my-4">
 
@@ -30,7 +35,7 @@
             <button 
             type="submit" 
             class="bg-blue-500 hover:bg-blue-600 rounded-lg shadow px-10 text-sm text-white h-10 focus:outline-none"
-            >Tweet</button>     
+            >Tweet</button>  
         </footer>
     </form>
 

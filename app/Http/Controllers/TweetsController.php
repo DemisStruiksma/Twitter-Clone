@@ -25,7 +25,7 @@ class TweetsController extends Controller
         Tweet::create([
             'user_id' => auth()->id(),
             'body' => $attributes['body'],
-            'image' => $attributes['image'],
+            // 'image' => $attributes['image'],
         ]);
 
         if(request('image')) {
@@ -33,6 +33,8 @@ class TweetsController extends Controller
         }
 
         $tweet->update($attributes);
+
+        flash('Published tweet!');
 
         return redirect()->route('home');
     }

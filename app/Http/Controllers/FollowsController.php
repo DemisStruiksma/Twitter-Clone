@@ -12,6 +12,8 @@ class FollowsController extends Controller
         auth()
             ->user()
             ->toggleFollow($user);
+
+        flash("Congrats, you now have a new friend!");
         
         return back();
     }

@@ -26,6 +26,9 @@
         </section>
         
         {{ $slot }}
+
+        @include('flash::message')
+
     </div>
 
     <script src="http://unpkg.com/turbolinks"></script>

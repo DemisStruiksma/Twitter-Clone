@@ -8,3 +8,7 @@
 
     {{ $tweets->links() }}
 </div>
+
+<footer class="flex items-center fixed bottom-0 right-0 m-6">
+        @include('flash::message')
+</footer>

@@ -9,3 +9,5 @@ $('#tweet_body').keyup(function() {
     $('#chars').css('color', '#000000');
   }
 });
+
+$('div.alert').not('.alert-important').delay(3000).fadeOut(350);

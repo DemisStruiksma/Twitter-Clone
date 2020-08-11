@@ -33,8 +33,13 @@
             {{ $tweet->body }}
         </p>
 
+        @isset($tweet->image)
         <img src="{{ $tweet->image }}" alt="image">
+        @endisset
 
+        @empty($tweet->image)
+        <!-- don't show image tag if user didn't attach image to tweet -->
+        @endempty
         <x-like-buttons :tweet="$tweet" />
     </div>
 </div>

@@ -34,7 +34,7 @@
         </p>
 
         @isset($tweet->image)
-        <img src="{{ $tweet->image }}" alt="image">
+        <img src="{{ $tweet->image }}" alt="image" class="pb-4" style="max-height:40vh;">
         @endisset
 
         @empty($tweet->image)

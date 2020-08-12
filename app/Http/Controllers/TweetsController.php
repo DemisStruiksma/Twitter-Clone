@@ -19,17 +19,22 @@ class TweetsController extends Controller
     {
         $attributes = request()->validate([
             'body' => 'required|max:255',
-            'image' => ['file'],
-            ]);
-
-        Tweet::create([
-            'user_id' => auth()->id(),
-            'body' => $attributes['body'],
-            // 'image' => $attributes['image'],
+            'image' => ['file']
         ]);
 
-        if(request('image')) {
+        if (request('image')) {
             $attributes['image'] = request('image')->store('images');
+
+            Tweet::create([
+            'user_id' => auth()->id(),
+            'body' => $attributes['body'],
+            'image' => $attributes['image']
+            ]);
+        }else{
+            Tweet::create([
+            'user_id' => auth()->id(),
+            'body' => $attributes['body'],
+            ]);
         }
 
         $tweet->update($attributes);

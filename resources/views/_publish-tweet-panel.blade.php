@@ -1,7 +1,8 @@
 <div class="border border-gray-400 rounded-lg px-8 py-6 mb-8">
-    <form method="POST" action="/tweets" enctype="multipart/form-data">
+    <form method="POST" action="/tweets" enctype="multipart/form-data" runat="server">
         @csrf
-        <!-- @method('PATCH') -->
+
+        <div class="flex">
         <textarea
         id="tweet_body" 
         name="body"
@@ -12,7 +13,14 @@
         maxlength="255"
         >
         </textarea>
-
+        <img src=""
+            alt="your image"
+            width="200"
+            id="preview"
+            class="pl-4"
+            style="max-width:200px;"
+        >
+    </div>
         <div>
 		    <label class="cursor-pointer text-blue-400 hover:text-blue-600">
 		        <svg 

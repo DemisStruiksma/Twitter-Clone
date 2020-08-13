@@ -41,5 +41,7 @@
         <!-- don't show image tag if user didn't attach image to tweet -->
         @endempty
         <x-like-buttons :tweet="$tweet" />
+
+        <x-delete-button :tweet="$tweet" />
     </div>
 </div>
